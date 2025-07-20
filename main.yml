@@ -1,2 +1,11 @@
-- name: GUI Test Code Review
-  uses: DigitalProductInnovationAndDevelopment/Code-Reviews-of-GUI-Tests@v1.0.0
+name: Run GUI Tests
+
+on:
+  pull_request: # Or any other trigger you want
+
+jobs:
+  run-reusable-gui-test:
+    uses: DigitalProductInnovationAndDevelopment/Code-Reviews-of-GUI-Tests@v1.0.0
+    # By default, the GITHUB_TOKEN is passed automatically.
+    # If you needed to pass other secrets, you would add a secrets block:
+    # secrets: inherit
